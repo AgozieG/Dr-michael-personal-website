@@ -1,0 +1,95 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me</title>
+    {% include "app1/base.html" %}
+    <link rel="stylesheet" href="{% static 'about11.css' %}">
+    {% load static %}
+</head>
+<body>
+    {% comment %} <div class="container">
+        <!-- Profile Image -->
+        <img src="{% static 'about1.jpg' %}" alt="Professor Chukwumerije Okereke" class="profile-img" />
+        <!-- Name and Title -->
+        <h1>Edeh Michael Onyema, PhD</h1>
+        <p class="title">Doctor of Philosophy</p>
+        <!-- Contact Information -->
+        <div class="contact-info">
+            <p>Email: mikedreamcometrue@gmail.com</p>
+            <p>Phone: +2347039009048</p>
+        </div>
+        <!-- Social Media Icons (animated on hover) -->
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/michael-onyema-edeh-ph-d-817928205/?originalSubdomain=ng" target="_blank"><img src="{% static 'in.jpeg' %}" alt=""></img></a>
+            <a href="https://web.facebook.com/prof.mikel" target="_blank"> <img src="{% static 'face.jpeg' %}" alt=""></img></a>
+            <a href="https://scholar.google.com/citations?user=Y6UiUoEAAAAJ&hl=en" target="_blank"> <img src="{% static 'gs.png' %}" alt=""></img></a>
+            <a href="https://www.researchgate.net/profile/Edeh-Onyema?ev=hdr_xprf" target="_blank"> <img src="{% static 'rg.jpeg' %}" alt=""></img></a>
+        </div>
+    </div> {% endcomment %}
+    <div class="profile-card">
+        <!-- LEFT SIDE: Text & Contact Info -->
+        <div class="info-section">
+          <!-- Black box with name and title -->
+          <div class="name-title-box">
+            <!-- If you want a small icon in the black box, uncomment or adjust this div
+            <div class="name-icon"></div> 
+            -->
+            <div class="name-details">
+              <!-- Name and Title -->
+              <h1>Edeh Michael Onyema, PhD</h1>
+              <p>Computer Science | Cybersecurity | AI/ML | Education | Health Informatics</p>
+            </div>
+          </div>
+    
+          <!-- Contact info -->
+          <div class="contact-section">
+            <p><i class="fa fa-envelope"></i><strong>Email: </strong>  mikedreamcometrue@gmail.com</p>
+            <p><i class="fa fa-phone"></i><strong>Number: </strong>  +2347039009048</p>
+          </div>
+    
+          <!-- Social icons -->
+          <div class="social-icons">
+            <!-- Replace static path references with your actual paths -->
+            <a href="https://www.linkedin.com/in/michael-onyema-edeh-ph-d-817928205/?originalSubdomain=ng" target="_blank">
+              <img src="{% static 'link2.jpg' %}" alt="LinkedIn" class="first">
+            </a>
+            <a href="https://web.facebook.com/prof.mikel" target="_blank">
+              <img src="{% static 'face3.png' %}" alt="Facebook" class="third">
+            </a>
+            <a href="https://scholar.google.com/citations?user=Y6UiUoEAAAAJ&hl=en" target="_blank">
+              <img src="{% static 'gs3.jpg' %}" alt="Google Scholar" class="second">
+            </a>
+            <a href="https://www.researchgate.net/profile/Edeh-Onyema?ev=hdr_xprf" target="_blank">
+              <img src="{% static 'rg6.png' %}" alt="ResearchGate" class="second">
+            </a>
+            <a href="https://www.scopus.com/authid/detail.uri?authorId=57226165864" target="_blank">
+              <img src="{% static 'scope6.png' %}" alt="ResearchGate" class="second">
+            </a>
+            <a href="https://www.webofscience.com/wos/author/record/ABO-8233-2022" target="_blank">
+              <img src="{% static 'clarivate.png' %}" alt="ResearchGate" class="second">
+            </a>
+          </div>
+        </div>
+    
+        <!-- RIGHT SIDE: Profile Image -->
+        <div class="image-section">
+          <!-- Replace the image path with your own -->
+          <img src="{% static 'faveicon.jpg' %}" alt="Edeh Michael Onyema, PhD">
+        </div>
+    </div>
+    <div class="text">
+       <p><strong>Michael Onyema Edeh (PhD)</strong> is an Adjunct Professor at both the Department of Computer Science and Engineering, Shobhit University, India, and the Institute of Management and Technology (IMT) Enugu. In these roles, he shares his expertise and passion for computer science with students and colleagues alike, contributing significantly to academic growth and research in his field.<br><br>
+        In addition to his teaching positions, Michael serves as the Dean of the Faculty of Allied Health and Applied Sciences and as the Head of the Department of Mathematics and Computer Science at Coal City University, Nigeria. These leadership roles enable him to influence curriculum development, research initiatives, and academic policies, ensuring a high standard of education at the institution.<br><br>
+        A military veteran and a postdoctoral researcher at Lincoln University College, Michael has also earned recognition as one of Nigeria’s Top Scientists by Elsevier for the period 2021–2025. This acknowledgment highlights his dedication and contributions to scientific research and academic excellence.<br><br>
+        Michael’s accomplishments include receiving the prestigious Chancellor's Award for Best Staff of the Year in 2020 and the Vice Chancellor’s Award for Research Excellence in 2023, both awarded by Coal City University. His previous experience as the Director of ICT at Coal City University, coupled with his current role as the State Chairman of the Nigeria Computer Society (NCS) for the Enugu State Chapter, further emphasizes his leadership and commitment to advancing technology and computer science within the academic and professional communities.<br><br>
+        Throughout his career, Michael has taught computer science courses to both postgraduate and undergraduate students at a wide range of Nigerian tertiary institutions. His teaching experience spans institutions such as Southwestern University, Spiritan University Nneochi, the National Open University of Nigeria (NOUN), Alex Ekwueme Federal University, Gregory University, Enugu State College of Education (Technical), African Thinkers Community of Inquiry College of Education (ATCOI-COE) Enugu, Pogil College of Health Technology, and the Federal Science and Technical College in Ogun State.<br><br>
+        Michael has also made his mark as a dynamic speaker by delivering keynote speeches at numerous international conferences, organizations, and institutions. With over 120 scholarly papers published in reputable journals, several authored books, and a wealth of experience serving as an editor and reviewer for top journals, he has established himself as a prolific contributor to the academic world. His research interests, which include cybersecurity, education, machine learning/AI, and health informatics, underscore his commitment to advancing knowledge in critical areas of modern technology and science.<br><br>
+        Open to service, opportunities, collaboration, and learning, Michael continues to inspire and lead in his field, sharing his expertise and vision with a global community of scholars and practitioners.<br>
+        </p>
+    </div>
+</body>
+</html>

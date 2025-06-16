@@ -1,0 +1,261 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin-top: 150px;
+}
+/* Container to center content */
+.container {
+    width: 80%;
+    max-width: 900px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 130px;
+}
+/* Profile Image */
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Name and Title */
+h1 {
+    font-size: 28px;
+    color: #535353;
+    margin-bottom: 10px;
+}
+p.title {
+    font-size: 20px;
+    color: #777;
+}
+/* Contact Information */
+.contact-info {
+    margin: 20px 0;
+    font-size: 16px;
+    color: #555;
+}
+.contact-info p {
+    margin: 8px 0;
+}
+/* Social Media Icons */
+.social-icons {
+    margin-top: 20px;
+}
+.social-icons a img{
+    height: 30px;
+    width: auto;
+}
+.social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 8px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.social-icons a:hover {
+    animation: bounce 0.5s;
+}
+/* Bounce animation keyframes */
+@keyframes bounce {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+.text{
+    text-align: left;
+    font-size: 16px;
+    font-family:Verdana;
+    color: rgb(0, 0, 0);
+    margin: 20px;
+    margin-left: 10px;
+    margin-top: 80px;
+}
+
+
+
+
+/* GLOBAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+
+  min-height: 100vh;
+}
+
+/* CONTAINER - The main card */
+.profile-card {
+  display: flex;               /* Puts info on the left, image on the right */
+  flex-direction: row;         /* Ensure horizontal layout */
+  width: 800px;                /* Adjust as needed */
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;            /* Ensures the rounded corners hide children */
+  margin-top: 20px;
+  margin-right: 20px;
+
+  float: right;
+}
+
+/* LEFT SIDE - Info Section with swirl background */
+.info-section {
+  width: 100%;                 /* Takes remaining space except for the image */
+  padding: 20px;
+  background: url('swirl-pattern.png') no-repeat center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  margin-left: 5px;
+  margin-top: -100px;
+}
+
+/* BLACK BOX for Name & Title */
+.name-title-box {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;      /* black background */
+  color: #000000;                 /* white text */
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  width: 470px;
+  margin-top: 30px;
+}
+
+/* Optional silhouette icon or user icon (if desired) */
+.name-icon {
+  width: 150px;
+  height: 80px;
+  margin-right: 10px;
+}
+
+
+
+.name-details h1 {
+  font-size: 30px;
+  margin-bottom: 4px;
+  color: rgb(0, 0, 0);
+}
+.name-details p {
+  font-size: 13px;
+
+}
+
+/* CONTACT SECTION */
+.contact-section {
+  margin-bottom: 20px;
+}
+.contact-section p {
+  margin: 8px 0;
+  font-size: 16px;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+.contact-section p i {
+  margin-right: 8px;
+  color: #f26722;  /* An accent color (orange-ish) for the icons */
+}
+
+/* SOCIAL ICONS */
+.social-icons {
+  display: grid;
+  columns: 3;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  grid-template-rows: repeat(2, 1fr);   /* 2 rows */
+  gap: 35px;
+  margin-left: 0px;
+  column-gap: 10px;
+  margin: 10px;
+}
+.social-icons a img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+  margin-left: -30px;
+}
+.social-icons a .second {
+  width: 140px;
+  height: 65px;
+  border-radius: 100px;
+  transition: transform 0.2s ease;
+  
+}
+.social-icons a .first {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+  margin-top: -8px;
+  margin-left: 10px;
+}
+
+.social-icons a .third {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+  margin-top: 0px;
+  margin-left: 10px;
+}
+/* .social-icons a img:hover {
+  transform: scale(1.6);
+}
+
+.social-icons a .second:hover {
+  transform: scale(1.6);
+} */
+
+/* RIGHT SIDE - Profile Image Container */
+.image-section {
+  flex-shrink: 0;             /* Prevent image section from shrinking */
+  width: 280px;               /* Set fixed width for the image side */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;      /* White background */
+}
+.image-section img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;          /* Crop or fit the image if it doesn't match aspect ratio */
+}
+
+/* RESPONSIVE ADJUSTMENTS (optional) */
+@media (max-width: 768px) {
+  .profile-card {
+    flex-direction: column;    /* Stack vertically on smaller screens */
+    width: 95%;
+  }
+  .image-section {
+    width: 100%;
+  }
+  .info-section {
+    background-position: top;
+  }
+}
+
