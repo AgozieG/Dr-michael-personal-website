@@ -5,14 +5,14 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    padding: 20px;
-    background: radial-gradient(circle, #f9f9f9, #f1f1f1);
+    padding: 0px;
+    background: radial-gradient(circle, #f0f0f0, #d0d0d0);
   }
   h2{
     color: #333;
     font-family: 'Arial', sans-serif;
     text-align: left;
-    margin-top: 150px;
+    margin-top: 100px;
     font-size: 40px;
     margin-left: 70px;
     text-decoration: underline;
@@ -21,11 +21,11 @@ body {
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 600px;
+    width: 300px;
     text-align: center;
     background-color: #fff;
     padding: 10px;
-    height: 250px;
+    height: 200px;
     padding-bottom: 20px;
   }
   .card .text {
@@ -34,7 +34,7 @@ body {
     padding-bottom: 50px;
   }
   .card .card-title:hover {
-    transform: scale(1.01);
+    transform: scale(1.03);
     transition: transform 0.3s ease;
   }
   .card-title {
@@ -45,7 +45,6 @@ body {
     color: black;
     background-color: rgb(119, 136, 153,0.5);
     margin: 5px;
-    border-radius: 0%;
   }
   .container {
     display: flex;
@@ -68,9 +67,9 @@ body {
     justify-content: center;
     padding: 10px;
     margin-top: 130px;
-    margin-left: 300px;
-    margin-bottom: 10px;
-    width: 50%;
+    margin-left: 450px;
+    width: 25%;
+    margin-bottom: 20px;
   }
   .banner .line {
     flex-grow: 1;
@@ -93,23 +92,28 @@ body {
 
 
 
-
-  /* Centered container */
   .publication-container {
-    max-width: 1200px;
+    width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
   }
 
   /* Publication entry styled as a card with flex layout */
   .publication-entry {
     position: relative; /* For orange stripe */
-    display: flex;
+    display: grid;
     align-items: flex-start;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 4px;
     margin-bottom: 20px;
+    overflow: hidden; /* To ensure rounded corners clip children if needed */
+    width: 530px;
+    height: 200px;
   }
   .publication-entry:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -132,44 +136,8 @@ body {
 
   /* The publication image on the left side */
   .publication-image {
-    width: 90px;
-    height: 140px; /* Adjust as needed */
-    object-fit: cover;
-    border-radius: 4px;
-    margin: 20px; /* Creates spacing from the borders */
-    flex-shrink: 0;  /* Prevent image from shrinking */
-  }
-
-    .publication-image1 {
-    width: 120px;
-    height: 80px; /* Adjust as needed */
-    object-fit: cover;
-    border-radius: 4px;
-    margin: 20px; /* Creates spacing from the borders */
-    flex-shrink: 0;  /* Prevent image from shrinking */
-  }
-
-    .publication-image3 {
-    width: 300px;
-    height: 90px; /* Adjust as needed */
-    object-fit: cover;
-    border-radius: 4px;
-    margin: 20px; /* Creates spacing from the borders */
-    flex-shrink: 0;  /* Prevent image from shrinking */
-  }
-
-    .publication-image4 {
-    width: 430px;
-    height: 90px; /* Adjust as needed */
-    object-fit: cover;
-    border-radius: 4px;
-    margin: 20px; /* Creates spacing from the borders */
-    flex-shrink: 0;  /* Prevent image from shrinking */
-  }
-
-    .publication-image2 {
-    width: 240px;
-    height: 80px; /* Adjust as needed */
+    width: 200px;
+    height: 100px; /* Adjust as needed */
     object-fit: cover;
     border-radius: 4px;
     margin: 20px; /* Creates spacing from the borders */
@@ -179,6 +147,7 @@ body {
   /* Container for the textual information */
   .publication-info {
     padding: 20px;
+    margin-top: -20px;
   }
 
   .publication-title {
@@ -206,3 +175,6 @@ body {
     text-decoration: none;
     color: rgb(59, 59, 59); /* Link color */
   }
+
+
+  

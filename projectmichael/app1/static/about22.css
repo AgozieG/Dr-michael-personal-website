@@ -7,7 +7,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    margin-top: 150px;
+    padding-top: 50px;
 }
 /* Container to center content */
 .container {
@@ -19,7 +19,6 @@ body {
     text-align: center;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 130px;
 }
 /* Profile Image */
 .profile-img {
@@ -84,7 +83,7 @@ p.title {
     color: rgb(0, 0, 0);
     margin: 20px;
     margin-left: 10px;
-    margin-top: 80px;
+    margin-top: 40px;
 }
 
 

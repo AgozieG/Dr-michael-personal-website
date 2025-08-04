@@ -1,15 +1,17 @@
 /* ensure page content never hides under footer */
 body {
   margin: 0;
-  padding-bottom: 80px; /* ≥ footer height */
+  padding-bottom: 0px;
+  margin-top: 0px;
+  width: 100%;
 }
 
 .site-footer {
-  position: fixed;
+  /* position: fixed;
   bottom: 0;
-  left: 0;
+  left: 0; */
   width: 100%;
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   border-top: 4px solid darkblue;
   height: 60px;
   display: flex;
@@ -17,6 +19,14 @@ body {
   justify-content: center;
   font-family: sans-serif;
   z-index: 1000;
+  width: 100%;
+  margin-top: 10px;
+
+
+}
+
+.foot{
+  width: 100%;
 }
 
 .title {
@@ -24,30 +34,32 @@ body {
     font-size: 1.4rem;
     margin: 0;
     font-weight: bolder;
+    margin-left: 190px;
 }
 
 .title2 {
     color: rgb(141, 141, 141);
     font-size: 1.4rem;
-    margin-left: 50px;
+    margin-left: 70px;
     font-weight: bolder;
 }
 .site-footer .footer-inner {
   display: flex;
   flex: 1;
   gap: 2rem;
-  margin-left: 20px;
+  margin-left: 130px;
   
 }
 
 .site-footer .contact-item {
   display: flex;
   align-items: center;
+  margin-left: 30px;
 }
 
 .site-footer .contact-label {
   font-weight: bold;
-  margin-right: 0.5rem;
+  margin-right: 0.2rem;
   color: white;
 }
 
