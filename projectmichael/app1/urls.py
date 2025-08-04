@@ -1,6 +1,6 @@
 # main/urls.py
 from django.urls import path
-from .views import index, base, about, books, journals, news, presentations, pics, fliers, advid, rec,test ,training, education, policy, security, mentor, research
+from .views import index, base, send_file_view, about, books, journals, news, presentations, pics, fliers, advid, rec,test ,training, education, policy, security, mentor, research
 
 urlpatterns = [
     path('', index, name='index'),
@@ -21,4 +21,5 @@ urlpatterns = [
     path('test/', test, name='test'),
     path('fliers/', fliers, name='fliers'),
     path('advid/', advid, name='advid'),
+    path('send-file/', send_file_view, name='send_file'),
 ]
