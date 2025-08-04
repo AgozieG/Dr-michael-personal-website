@@ -8,6 +8,9 @@ def index(request):
 def base(request):
     return render(request, 'app1/base.html')
 
+def footer(request):
+    return render(request, 'app1/footer.html')
+
 def about(request):
     return render(request, 'app1/about.html')
 
