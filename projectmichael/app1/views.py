@@ -79,7 +79,7 @@ def send_file_view(request):
                 subject=subject,
                 body=body,
                 from_email=None,            # uses DEFAULT_FROM_EMAIL
-                to=['agboy1718@gmail.com'],
+                to=['michael.edeh@ebsu.edu.ng'],
             )
             # Attach the uploaded file
             email.attach(

@@ -66,7 +66,7 @@ body {
     text-align: center;
     justify-content: center;
     padding: 10px;
-    margin-top: 130px;
+    margin-top: 150px;
     margin-left: 450px;
     width: 25%;
     margin-bottom: 20px;
@@ -177,4 +177,72 @@ body {
   }
 
 
-  
+  /* ===== Responsive CSS for news7.css (keeps colours & structure) ===== */
+
+
+
+/* Publication container: responsive grid so cards wrap neatly */
+
+
+/* Each entry: keep image-left / text-right layout using flex */
+
+
+/* Image on left: responsive sizes */
+
+
+/* link color left unchanged */
+a { text-decoration: none; color: inherit; }
+
+/* ---------------- Tablet (<= 1024px) ---------------- */
+@media (max-width: 1024px) {
+  .publication-container {
+    grid-template-columns: repeat(2, 1fr); /* two columns on tablets if space permits */
+    gap: 16px;
+    padding: 0 14px;
+    margin-top: -30px;
+  }
+  .publication-entry { padding: 10px; }
+  .publication-image { width: 160px; height: 90px; }
+  .publication-title { font-size: 0.98rem; }
+}
+
+/* ---------------- Mobile (<= 768px) ---------------- */
+/* Keep image left / text right but scale image smaller so the card fits full width */
+@media (max-width: 768px) {
+  html, body { overflow-x: scroll; } /* prevent horizontal scroll */
+
+  .publication-container {
+    flex-direction: column; /* single column layout */
+    gap: 2px;
+    padding: 0 10px;
+    margin-top: -10px;
+  }
+  .banner{
+    margin-top: -30px;
+  }
+
+  .publication-entry {
+    
+    padding: 10px;
+    gap: 10px;
+    width: 32%;
+    margin-left: 400px;
+  }
+
+  .publication-image {
+    width: 120px;
+    height: 72px;
+    margin-left: 6px;
+  }
+
+  .publication-info { padding: 6px 8px; margin-top: 5px;}
+  .publication-title { font-size: 0.95rem; }
+}
+
+/* --------------- Very small phones (<= 420px) --------------- */
+@media (max-width: 420px) {
+  .publication-entry { gap: 8px; padding: 8px; }
+  .publication-image { width: 96px; height: 60px; }
+  .publication-title { font-size: 0.92rem; }
+  .banner {padding: 10px; }
+}

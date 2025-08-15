@@ -7,37 +7,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Edeh Michael Onyema PHD</title>
   <link rel="icon" href="{% static 'michael.png' %}" type="image/x-icon">
-  <link rel="stylesheet" href="{% static 'base5.css' %}">
+  <link rel="stylesheet" href="{% static 'base60.css' %}">
 </head>
 <body>
   <!-- Header / Navigation -->
   <header id="main-header">
     <nav class="navbar">
-      <nav class="logo">
-        <!-- Logo image on the left side -->
-        <a href="{% url "index" %}" class="left">
-          <img src="{% static 'nice.jpg' %}" alt="Logo" class="logo-img">
-          <p>Edeh Michael Onyema, PhD</p>
-        </a>
-        {% comment %} <video width="440" height="160" controls autoplay loop muted playsinline>
-          <source src="{% static 'preview.mp4' %}" type="video/mp4">
-          Your browser does not support the video tag.
-        </video> {% endcomment %}
-      </nav>
+      <div class="navbar-header" style="display: flex; align-items: center; width: 100%;">
+        <div class="logo">
+          <!-- Logo image and text side by side -->
+          <a href="{% url "index" %}" class="left" style="display: flex; align-items: center;">
+            <img src="{% static 'nice.jpg' %}" alt="Logo" class="logo-img">
+            <span class="logo-text">Edeh Michael Onyema, PhD</span>
+          </a>
+        </div>
+        <!-- Hamburger button for mobile/tablet -->
+        <button class="menu-toggle" aria-label="Toggle navigation" onclick="toggleMenu()" style="margin-left: auto;">
+          &#9776;
+        </button>
+      </div>
       <ul class="nav-links">
         <li><a href="{% url "index" %}">Home</a></li>
         <li><a href="{% url "about" %}">About Me</a></li>
         <li class="dropdown">
-          <a href="#">Research +</a>
+          <a href="#" onclick="toggleDropdown(event, this)">Research +</a>
           <ul class="dropdown-content">
             <li><a href="{% url "journals" %}">Journal</a></li>
             <li><a href="{% url "books" %}">Books</a></li>
             <li><a href="{% url "news" %}">Newspaper Publications</a></li>
-            <li><a href="{% url "presentations" %}">Conferences and Presentations</a></li>
+            <li><a href="{% url "presentations" %}">Conference&amp;Presentation</a></li>
           </ul>
         </li>
         <li class="dropdown">
-          <a href="#">Services +</a>
+          <a href="#" onclick="toggleDropdown(event, this)">Services +</a>
           <ul class="dropdown-content">
             <li><a href="{% url "training" %}">Training and Consultancy</a></li>
             <li><a href="{% url "education" %}">Education</a></li>
@@ -48,7 +50,7 @@
           </ul>
         </li>
         <li class="dropdown">
-          <a href="#">Gallery +</a>
+          <a href="#" onclick="toggleDropdown(event, this)">Gallery +</a>
           <ul class="dropdown-content">
             <li><a href="{% url "pics" %}">Images</a></li>
             <li><a href="{% url "rec" %}">Videos</a></li>
@@ -56,7 +58,7 @@
         </li>
         <li><a href="{% url "test" %}">Testimonials</a></li>
         <li class="dropdown">
-          <a href="#">Ads+</a>
+          <a href="#" onclick="toggleDropdown(event, this)">Ads +</a>
           <ul class="dropdown-content">
             <li><a href="{% url "fliers" %}">Fliers</a></li>
             <li><a href="{% url "advid" %}">Videos</a></li>
@@ -82,6 +84,48 @@
         header.classList.remove('sticky');
       }
     });
+
+    // Toggle menu show/hide on hamburger click
+    function toggleMenu() {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('show');
+    }
+
+    // Toggle dropdown submenu for clicked menu only
+    function toggleDropdown(event, el) {
+      event.preventDefault();
+      event.stopPropagation();
+      // Hide other open dropdowns
+      document.querySelectorAll('.dropdown-content').forEach(function(ul) {
+        if (ul !== el.nextElementSibling) {
+          ul.classList.remove('show');
+        }
+      });
+      // Toggle this dropdown
+      const submenu = el.nextElementSibling;
+      submenu.classList.toggle('show',);
+    }
+
+    // Hide menu when clicking outside (optional UX improvement)
+    document.addEventListener('click', function(e) {
+      const navLinks = document.querySelector('.nav-links');
+      const menuToggle = document.querySelector('.menu-toggle');
+      if (
+        navLinks.classList.contains('show') &&
+        !navLinks.contains(e.target) &&
+        !menuToggle.contains(e.target)
+      ) {
+        navLinks.classList.remove('show');
+      }
+      // Hide all dropdowns if click outside
+      document.querySelectorAll('.dropdown-content.show').forEach(function(ul) {
+        if (!ul.contains(e.target)) {
+          ul.classList.remove('show');
+        }
+      });
+    });
   </script>
+</body>
+</html>
 </body>
 </html>

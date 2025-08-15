@@ -4,7 +4,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
     padding: 0px;
     background: radial-gradient(circle, #f9f9f9, #f1f1f1);
   }
@@ -47,7 +47,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 60px;
     padding: 20px;
     text-decoration: none;
   }
@@ -84,3 +84,46 @@ body {
     padding-left: 10px;
     padding-right: 10px;
   }
+
+
+
+/* ---------- Responsive: phones (<= 768px) ---------- */
+@media (max-width: 768px) {
+  html, body { overflow-x: hidden; } /* defensive */
+
+  .container {
+    display: flex;
+    justify-content: center;
+    gap: 1px !important;
+    padding: 10px !important;
+    max-width: 80% !important;
+    width: 100%;
+  }
+
+  .card {
+    height: 340px !important;           /* let image determine height on phones */
+    max-width: 80% !important;
+    padding: 6px !important;
+    border-radius: 6px !important;
+    gap: 10px;
+    margin-left: 80px;
+    
+  }
+  .container a{
+    width: 100%;
+  }
+
+  .card img {
+    height: 330px !important;
+    max-height: 480px; /* cap so super tall images don't explode layout */
+    width: 100%;
+  }
+
+  .banner { margin-top: 12px !important; padding: 10px !important; margin-left: -30px; width: calc(100% + 60px); }
+}
+
+/* ---------- Small phones (<= 420px) ---------- */
+@media (max-width: 420px) {
+  .container { padding: 8px !important; gap: 10px !important; }
+  .card img { max-height: 320px !important; }
+}

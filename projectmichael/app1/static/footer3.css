@@ -21,8 +21,6 @@ body {
   z-index: 1000;
   width: 100%;
   margin-top: 10px;
-
-
 }
 
 .foot{
@@ -78,4 +76,58 @@ body {
   width: 20px;
   height: 20px;
   margin-left: 0.3rem;
+}
+
+/* Responsive for tablets */
+@media (max-width: 1024px) {
+  .site-footer {
+    height: auto;
+    padding: 10px 0;
+    font-size: 1rem;
+  }
+  .site-footer .footer-inner {
+    gap: 1rem;
+    margin-left: 30px;
+    flex-wrap: wrap;
+  }
+  .title, .title2 {
+    font-size: 1.1rem;
+    margin-left: 30px;
+  }
+  .site-footer .contact-item {
+    margin-left: 10px;
+    font-size: 1rem;
+  }
+}
+
+/* Responsive for phones */
+@media (max-width: 600px) {
+  .site-footer {
+    height: auto;
+    padding: 10px 0;
+    font-size: 0.95rem;
+  }
+  .site-footer .footer-inner {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-left: 0;
+    align-items: flex-start;
+    width: 100%;
+    padding: 0 10px;
+  }
+  .title, .title2 {
+    font-size: 1rem;
+    margin-left: 0;
+    margin-bottom: 5px;
+  }
+  .site-footer .contact-item {
+    margin-left: 0;
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+  }
+  .site-footer .gmail-logo {
+    width: 18px;
+    height: 18px;
+    margin-left: 0.2rem;
+  }
 }

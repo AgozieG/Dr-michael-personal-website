@@ -256,3 +256,71 @@
   .white{
     color: white;
   }
+
+    .publication-entry::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(135deg, #1e90ff, #4facfe);
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+
+    /* Keep existing styles above, then add these responsive overrides */
+
+/* Force 2-column layout on desktops/laptops */
+
+
+/* Cards adapt to container width */
+.card {
+  width: 100%;
+  max-width: 350px;
+}
+
+/* Tablet screens (≤ 900px) → still 2 columns but smaller cards */
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  .card img {
+    height: 220px;
+  }
+}
+
+/* Phone screens (≤ 600px) → 1 column full-width */
+@media (max-width: 600px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  }
+  .card {
+    max-width: 100%;
+  }
+  .card img {
+    height: auto;
+  }
+  .banner {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    margin-top: 10px;
+  }
+  .intro{
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+}
+
+/* Make the banner center nicely on mobile */
+@media (max-width: 768px) {
+  .banner {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+}

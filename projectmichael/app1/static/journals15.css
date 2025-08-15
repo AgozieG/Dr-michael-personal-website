@@ -209,3 +209,107 @@ body {
     text-decoration: none;
     color: rgb(59, 59, 59); /* Link color */
   }
+
+
+
+
+/* ------------------------------------------------------------------ */
+/* Tablet: <= 1024px — keep two columns but reduce image sizes & gaps */
+/* ------------------------------------------------------------------ */
+@media (max-width: 1024px) {
+  .publication-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    padding: 0 12px;
+  }
+
+  .publication-entry {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  /* scale down the larger class-based images so they don't overflow */
+  .publication-image  { width: 72px !important; height: auto !important; margin: 12px !important; }
+  .publication-image1 { width: 96px !important; height: auto !important; margin: 12px !important; }
+  .publication-image2 { width: 140px !important; height: auto !important; margin: 12px !important; }
+  .publication-image3 { width: 160px !important; height: auto !important; margin: 12px !important; }
+  .publication-image4 { width: 200px !important; height: auto !important; margin: 12px !important; }
+
+  .publication-title { font-size: 0.98rem; }
+  .publication-entry::before { width: 5px; } /* keep stripe visible */
+}
+
+/* ------------------------------------------------------------------ */
+/* Phone: <= 768px — single column, full width cards, small images       */
+/* NOTE: image left + text right preserved, but sizes reduced to fit   */
+/* ------------------------------------------------------------------ */
+@media (max-width: 768px) {
+  /* make container single column so each entry is full width */
+  .publication-container {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 0 10px;
+  }
+
+  /* ensure anchors fill width */
+  .publication-container > a { display: block; }
+
+  .publication-entry {
+    padding: 10px;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  /* tighten stripe and spacing */
+  .publication-entry::before {
+    left: 0;
+    top: 0;
+    width: 4px;
+  }
+
+  /* reduce image sizes so the content fits comfortably on phones */
+  .publication-image  { width: 56px !important; height: auto !important; margin: 8px !important; }
+  .publication-image1 { width: 64px !important; height: auto !important; margin: 8px !important; }
+  .publication-image2 { width: 96px !important; height: auto !important; margin: 8px !important; }
+  .publication-image3 { width: 110px !important; height: auto !important; margin: 8px !important; }
+  .publication-image4 { width: 140px !important; height: auto !important; margin: 8px !important; }
+
+  /* text sizing and spacing for readability on small screens */
+  .publication-info { padding: 6px 4px; }
+  .publication-title { font-size: 0.92rem; line-height: 1.28; }
+
+  /* avoid horizontal scroll if something still slightly overflows */
+  html, body { overflow-x: hidden; }
+}
+
+/* ------------------------------------------------------------------ */
+/* Very small phones: <= 420px — extra small text and images           */
+/* ------------------------------------------------------------------ */
+@media (max-width: 420px) {
+  .publication-entry { gap: 8px; padding: 8px; }
+  .publication-image  { width: 48px !important; margin: 6px !important; }
+  .publication-image1 { width: 56px !important; margin: 6px !important; }
+  .publication-image2 { width: 84px !important; margin: 6px !important; }
+  .publication-image3 { width: 96px !important; margin: 6px !important; }
+  .publication-image4 { width: 120px !important; margin: 6px !important; }
+  .publication-title { font-size: 0.86rem; }
+  .publication-info { padding: 6px 4px; }
+}
+
+/* ------------------------------------------------------------------ */
+/* Banner adjustments so it centers nicely on smaller screens         */
+/* ------------------------------------------------------------------ */
+@media (max-width: 1024px) {
+  .banner {
+    margin-top: 70px;   /* reduce top gap on tablet */
+    margin-left: 0;
+    width: 100%;
+    padding: 18px 12px 6px;
+  }
+  .banner .text { font-size: 20px; padding: 6px 12px; }
+}
+
+@media (max-width: 420px) {
+  .banner { padding: 12px 10px; margin-top: 48px; }
+  .banner .text { font-size: 16px; padding: 4px 8px; }
+}

@@ -82,3 +82,30 @@ body {
     margin: 0 20px;
     text-transform: uppercase;
   }
+
+  /* === Force 2-column grid on larger screens === */
+
+
+/* === Tablet screens: keep 2 columns but smaller gap === */
+
+
+/* === Mobile screens: switch to 1 column === */
+@media (max-width: 600px) {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0px;
+    gap: 5px !important;
+    padding: 10px !important;
+    margin: 0px;
+  }
+  .card {
+    max-width: 50% !important;
+    width: 32%;
+    height: fit-content;
+  }
+  .card img {
+    width: 90% !important;
+    height: auto !important;
+  }
+}
