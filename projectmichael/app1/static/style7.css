@@ -14,7 +14,7 @@
   }
 
 .hero {
-    height: 678px;
+    height: 778px;
     color: rgb(255, 253, 250);
     margin-top: 40px; /* To ensure hero isn’t hidden behind fixed nav */
     background: linear-gradient(top, #1f1f1f, #656565);
@@ -36,12 +36,12 @@
     /* background: linear-gradient(to left, #c7c7c7,#aaaaaa); */
     padding: 10px;
     width: 700px;
-  
+    margin-bottom: 0px;
   
   }
   .hero-content h1 {
     font-size: 13px;
-    margin-bottom: 1rem;
+    margin-bottom: 0rem;
     text-align: justify;
     font-weight: normal;
   }
@@ -57,17 +57,18 @@
 
   
 .hero img{
-  height: 650px;
+  height: 690px;
   width: 550px;
-  margin-left: 686px;
+  margin-left: 726px;
   box-shadow: none;
-  margin-top: -580px;
+  margin-top: -600px;
 
 }
 
 .hero2 img{
   width: 1260px;
   height: 100%;
+  margin-top:0px;
 }
 
 
